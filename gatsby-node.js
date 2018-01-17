@@ -39,11 +39,7 @@ function local(createPage, graphql) {
 		}
 	}`)
 	.then(res => {
-		//console.log('Data', res.data.allMarkdownRemark.edges)
-		if(res.errors) {
-			//console.log('Error', res.errors);
-			return Promise.reject(res.errors)
-		}
+		if(res.errors) { return Promise.reject(res.errors) }
 
 		res.data.allMarkdownRemark.edges.forEach(({node}) => {
 			createPage({
@@ -74,11 +70,8 @@ function contentful(createPage, graphql) {
 		}
 	}`)
 	.then(res => {
-		console.log('Data', res.data.allContentfulBlogPost.edges)
-		if(res.errors) {
-			console.log('Error', res.errors);
-			return Promise.reject(res.errors)
-		}
+
+		if(res.errors) { return Promise.reject(res.errors) }
 
 		res.data.allContentfulBlogPost.edges.forEach(({node}) => {
 			createPage({
