@@ -14,6 +14,8 @@ const TemplateWrapper = ({ children }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+      {/* <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script> */}
     <Header />
     <div
       style={{

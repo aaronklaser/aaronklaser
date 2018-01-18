@@ -5,9 +5,9 @@ import Card from './../components/Card'
 export default function IndexPage({data}) {
 
   const posts = data.allMarkdownRemark.edges.map(edge =>
-    <li key={edge.node.id}>
-      <Link  to={edge.node.frontmatter.path}>Go to {edge.node.frontmatter.title}</Link>
-    </li>
+    <div key={edge.node.id}>
+      <Link to={edge.node.frontmatter.path}>Go to {edge.node.frontmatter.title}</Link>
+    </div>
   )
 
   const blogs = data.allContentfulBlogPost.edges.map(edge =>
@@ -19,9 +19,9 @@ export default function IndexPage({data}) {
 
 	return (
 		<div>
-
-
       {blogs}
+      <br/>
+      <br/>
       {posts}
     </div>
 	)

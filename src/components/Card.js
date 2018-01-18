@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import * as moment from 'moment'
 
 const Card = (props) => (
 	<div className="card">
@@ -23,7 +24,7 @@ const Card = (props) => (
 
 			<div className="content">
 				{props.content}
-				<time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+				{/* <time>11:09 PM - 1 Jan 2016</time> */}
 			</div>
 		</div>
 	</div>
