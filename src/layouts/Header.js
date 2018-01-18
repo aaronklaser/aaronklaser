@@ -31,44 +31,48 @@ const Header = () => (
     </div>
     <div className="navbar-menu">
       <div className="navbar-start">
-        <Link className="navbar-item" to="/">
+        <Link className="navbar-item" to="/blog">
           Blog
         </Link>
+        <Link className="navbar-item" to="/medium">
+          <span className="icon" style={{ marginRight: 5 }}>
+            <i className="fab fa-lg fa-medium"></i>
+          </span>
+          Medium
+        </Link>
         <div className="navbar-item has-dropdown is-hoverable">
-          <a className="navbar-link">
-            Features
-          </a>
-
+          <Link className="navbar-link" to="/projects">
+            Projects
+          </Link>
           <div className="navbar-dropdown">
-            <Link className="navbar-item">
+            <Link className="navbar-item" to="/projects">
               Overview
             </Link>
             <hr className="navbar-divider" />
-            <Link className="navbar-item">
+            <Link className="navbar-item" to="/">
               This Site
             </Link>
-            <Link className="navbar-item">
+            <Link className="navbar-item" to="/">
               Angular The React Way
             </Link>
-
           </div>
         </div>
       </div>
       <div className="navbar-end">
         <a className="navbar-item" href="https://github.com/aaronklaser">
           <span className="icon">
-            <i className="fa fa-lg fa-github"></i>
+            <i className="fab fa-lg fa-github"></i>
           </span>
         </a>
         <a className="navbar-item" href="https://twitter.com/awklaser">
           <span className="icon has-text-info">
-            <i className="fa fa-lg fa-twitter"></i>
+            <i className="fab fa-lg fa-twitter"></i>
           </span>
         </a>
-        <a className="navbar-item" href="https://resume.aaronklaser.com">
+        <a className="navbar-item" href="http://resume.aaronklaser.com">
           Resume
           <span className="icon" style={{ color: '#0077B5', marginLeft: 5 }}>
-            <i className="fa fa-lg fa-linkedin-square"></i>
+            <i className="fab fa-lg fa-linkedin"></i>
           </span>
         </a>
       </div>

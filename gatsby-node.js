@@ -7,12 +7,36 @@
  // You can delete this file if you're not using it
 const path = require('path')
 
+const pages = [
+	{
+		path: '/blog',
+		component: path.resolve('src/pages/Blog.js')
+	},
+	{
+		path: '/medium',
+		component: path.resolve('src/pages/Medium.js')
+	},
+	{
+		path: '/projects',
+		component: path.resolve('src/pages/Projects.js')
+	}
+]
+
 exports.createPages = ({ boundActionCreators, graphql }) => {
 
 	const { createPage } = boundActionCreators
 
+	sitePages(createPage, pages)
 	local(createPage, graphql)
-	contentful(createPage, graphql)
+}
+
+function sitePages(createPage, pages) {
+	pages.forEach(page =>
+		createPage({
+			path: page.path,
+			component: page.component
+		})
+	)
 }
 
 function local(createPage, graphql) {
@@ -45,38 +69,6 @@ function local(createPage, graphql) {
 			createPage({
 				path: node.frontmatter.path,
 				component: postTemplate
-			})
-		});
-	})
-}
-
-function contentful(createPage, graphql) {
-	const blogTemplate = path.resolve('src/templates/Blog.js')
-
-	return graphql(`{
-		allContentfulBlogPost {
-			edges {
-				node {
-					id
-					path
-					title
-					createdAt
-					content {
-						id
-						content
-					}
-				}
-			}
-		}
-	}`)
-	.then(res => {
-
-		if(res.errors) { return Promise.reject(res.errors) }
-
-		res.data.allContentfulBlogPost.edges.forEach(({node}) => {
-			createPage({
-				path: node.path,
-				component: blogTemplate
 			})
 		});
 	})

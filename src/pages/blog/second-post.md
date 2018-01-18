@@ -1,6 +1,6 @@
 ---
 type: 'local'
-path: '/second-post'
+path: '/blog/second-post'
 title: 'Second Blog post'
 published: true
 date: '2018-01-16'

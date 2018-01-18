@@ -1,21 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import Header from './Header'
+import Footer from './Footer'
 
-import Header from '../components/Header'
 import './index.scss'
 
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Gatsby Default Starter"
+      title="Aaron is Awesome"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'Aaron Klaser\'s personal wedsite, portfolio, blog, tutorials, and just cool $h!t' },
+        { name: 'keywords', content: 'resume, blog, porfolio, tutorials, aaron klaser' },
+      ]}
+      script={[
+        { 'src': 'https://use.fontawesome.com/releases/v5.0.4/js/all.js'}
       ]}
     />
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-      {/* <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script> */}
     <Header />
     <div
       style={{
@@ -27,7 +29,9 @@ const TemplateWrapper = ({ children }) => (
     >
       {children()}
     </div>
+    <Footer />
   </div>
+
 )
 
 TemplateWrapper.propTypes = {
