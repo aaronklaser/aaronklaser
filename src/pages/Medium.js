@@ -6,8 +6,8 @@ import MediumArticle from '../components/MediumArticle'
 export default function MediumPage({data}) {
 
 	const feed = data.allMediumPost.edges.map(edges => (
-		<div style={{ marginTop: 40, marginBottom: 15}}>
-			<MediumArticle key={edges.node.id} data={edges.node} />
+		<div key={edges.node.id} style={{ marginTop: 40, marginBottom: 15}}>
+			<MediumArticle data={edges.node} />
 		</div>
   ))
 
@@ -16,8 +16,14 @@ export default function MediumPage({data}) {
       <section className="hero is-dark">
         <div className="hero-body">
           <div className="container">
-            <h1 className="title">
-							<span className="icon" style={{ marginRight: 10 }}>
+            <h1 className="title" style={{
+							paddingLeft: 50
+						}}>
+							<span className="icon" style={{
+								position: 'absolute',
+								top: 0,
+								left: 8,
+							}}>
 								<i className="fab fa-lg fa-medium"></i>
 							</span>
               Medium
@@ -27,7 +33,7 @@ export default function MediumPage({data}) {
 							a coding blog, I don't like having to use Gist for all my code snippes. So I created this
 							site.
             </h2>
-						<a className="button" href="https://medium.com/@aaron.klaser" target="_blank">
+						<a className="button is-inverted is-outlined" href="https://medium.com/@aaron.klaser" target="_blank">
 							View My Medium
 							<span className="icon" style={{ marginLeft: 5 }}>
 								<i className="fab fa-lg fa-medium"></i>
@@ -41,7 +47,7 @@ export default function MediumPage({data}) {
         margin: '0 auto',
         maxWidth: 800,
         padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 40
+        paddingTop: 0
       }}>
 				{feed}
       </div>
