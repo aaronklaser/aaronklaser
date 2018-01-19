@@ -1,19 +1,37 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import * as moment from 'moment'
+import moment from 'moment'
 
 const BlogFeedItem = ({frontmatter, content}) => (
-	<section className="section">
-    <div className="container">
-      <h1 className="title">{frontmatter.title}</h1>
-      <h2 className="subtitle">
-        {frontmatter.date}
-      </h2>
-    </div>
-		<div className="content" dangerouslySetInnerHTML={{ __html: content }} />
-		<Link className="button is-small is-outlined" to={frontmatter.path}>Read More</Link>
-		<hr />
-  </section>
+  <div className="box">
+    <article className="media">
+      <div className="media-left">
+        <figure className="image is-64x64">
+          <img src={frontmatter.icon} alt="Image" />
+        </figure>
+      </div>
+      <div className="media-content">
+
+        <div className="content" dangerouslySetInnerHTML={{ __html: content.split(" ").splice(0,150).join(" ").concat('...') }} />
+
+        <nav className="level">
+          <div className="level-left">
+            <Link className="level-item button is-small is-link is-outlined" to={frontmatter.path}>Read More</Link>
+          </div>
+          <div className="level-right">
+            <p className="level-item has-text-link is-size-7">
+              {moment(frontmatter.date).calendar(null, {
+                sameDay: '[Today]',
+                lastDay: '[Yesterday]',
+                lastWeek: '[Last] dddd',
+                sameElse: 'MMM Do YYYY'
+            })}
+            </p>
+          </div>
+        </nav>
+      </div>
+    </article>
+  </div>
 )
 
 export default BlogFeedItem

@@ -6,7 +6,7 @@ const Footer = () => (
 		<div className="container">
 			<div className="content has-text-centered">
 				<p>
-					Built on <strong>Gatsby</strong> with <strong>Bulma</strong> by <a href="https://github.com/aaronklaser">Aaron Klaser</a>
+					Built on <strong>Gatsby</strong> with <strong>Bulma</strong> by Me! <a href="https://github.com/aaronklaser">Aaron Klaser</a>
 					{/* The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. */}
 					<br />
 					Copyright 2018

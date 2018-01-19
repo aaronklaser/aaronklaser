@@ -7,7 +7,12 @@ import Footer from './Footer'
 import './index.scss'
 
 const TemplateWrapper = ({ children }) => (
-  <div>
+  <div style={{
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'stretch',
+    minHeight: '100vh'
+  }}>
     <Helmet
       title="Aaron is Awesome"
       meta={[
@@ -17,14 +22,18 @@ const TemplateWrapper = ({ children }) => (
       script={[
         { 'src': 'https://use.fontawesome.com/releases/v5.0.4/js/all.js'}
       ]}
+      link={[
+        {'rel':'stylesheet', 'href': 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'}
+      ]}
     />
     <Header />
     <div
       style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
+        // margin: '0 auto',
+        // maxWidth: 960,
+        // padding: '0px 1.0875rem 1.45rem',
+        // paddingTop: 0,
+        flex: 1
       }}
     >
       {children()}

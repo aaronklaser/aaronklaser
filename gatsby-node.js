@@ -40,7 +40,6 @@ function sitePages(createPage, pages) {
 }
 
 function local(createPage, graphql) {
-	const postTemplate = path.resolve('src/templates/Post.js')
 
 	return graphql(`{
 		allMarkdownRemark(
@@ -55,6 +54,7 @@ function local(createPage, graphql) {
 					html
 					id
 					frontmatter {
+						icon
 						path
 						title
 					}
@@ -68,7 +68,7 @@ function local(createPage, graphql) {
 		res.data.allMarkdownRemark.edges.forEach(({node}) => {
 			createPage({
 				path: node.frontmatter.path,
-				component: postTemplate
+				component: path.resolve('src/templates/BlogPost.js')
 			})
 		});
 	})

@@ -7,7 +7,6 @@ const Header = () => (
        aria-label="main navigation"
        style={{
          borderBottom: 'solid 1px #dddddd',
-         marginBottom: 15
        }}>
     <div className="navbar-brand">
       <Link className="navbar-item" to="/">
@@ -32,7 +31,10 @@ const Header = () => (
     <div className="navbar-menu">
       <div className="navbar-start">
         <Link className="navbar-item" to="/blog">
-          Blog
+          <span className="icon has-text-info" style={{ marginRight: 5 }}>
+            <i className="fas fa-code"></i>
+          </span>
+          Code Blog
         </Link>
         <Link className="navbar-item" to="/medium">
           <span className="icon" style={{ marginRight: 5 }}>
@@ -65,7 +67,7 @@ const Header = () => (
           </span>
         </a>
         <a className="navbar-item" href="https://twitter.com/awklaser">
-          <span className="icon has-text-info">
+          <span className="icon has-text-info" style={{ color: '#0084FF' }}>
             <i className="fab fa-lg fa-twitter"></i>
           </span>
         </a>
