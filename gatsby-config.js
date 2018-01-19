@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `AaronKlaser.com`,
   },
+  pathPrefix: "/aaronklaser",
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-remark`,
