@@ -31,7 +31,7 @@ const Header = () => (
     <div className="navbar-menu">
       <div className="navbar-start">
         <Link className="navbar-item" to="/blog">
-          <span className="icon has-text-info" style={{ marginRight: 5 }}>
+          <span className="icon has-text-primary" style={{ marginRight: 5 }}>
             <i className="fas fa-code"></i>
           </span>
           Code Blog

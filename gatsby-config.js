@@ -21,7 +21,7 @@ module.exports = {
     // {
     //   resolve: `gatsby-source-medium`,
     //   options: {
-    //     username: `aaron.klaser`,
+    //     username: `@aaron.klaser`,
     //   },
     // },
   ],

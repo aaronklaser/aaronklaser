@@ -1,7 +1,15 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import MediumArticle from '../components/MediumArticle'
+
 export default function MediumPage({data}) {
+
+	const feed = data.allMediumPost.edges.map(edges => (
+		<div style={{ marginTop: 40, marginBottom: 15}}>
+			<MediumArticle key={edges.node.id} data={edges.node} />
+		</div>
+  ))
 
 	return (
 		<div>
@@ -19,45 +27,47 @@ export default function MediumPage({data}) {
 							a coding blog, I don't like having to use Gist for all my code snippes. So I created this
 							site.
             </h2>
+						<a className="button" href="https://medium.com/@aaron.klaser" target="_blank">
+							View My Medium
+							<span className="icon" style={{ marginLeft: 5 }}>
+								<i className="fab fa-lg fa-medium"></i>
+							</span>
+						</a>
           </div>
         </div>
       </section>
-      <div className="content" style={{
+
+			<div style={{
         margin: '0 auto',
-        maxWidth: 960,
+        maxWidth: 800,
         padding: '0px 1.0875rem 1.45rem',
         paddingTop: 40
       }}>
-				<p>
-					As soon as I can figure out who to pull in my Medium articles
-					this will show a feed of my most recent Medium posts.
-					In the mean time just click this button and check out my Medium posts.
-				</p>
-				<a className="button" href="https://medium.com/@aaron.klaser" target="_blank">
-					View My Medium
-					<span className="icon" style={{ marginLeft: 5 }}>
-						<i className="fab fa-lg fa-medium"></i>
-					</span>
-				</a>
+				{feed}
       </div>
+
     </div>
-		// <div className="content">
-		// 	<p>
-		// 		Medium is where I ramble and rant and tell stories. I orginally was going to use it as
-		// 		a coding blog, I don't like having to use Gist for all my code snippes. So I created this
-		// 		site.
-		// 	</p>
-		// 	<p>
-		// 		As soon as I can figure out who to pull in my Medium articles
-		// 		this will show a feed of my most recent Medium posts.
-		// 		In the mean time just click this button and check out my Medium posts.
-		// 	</p>
-		// 	<a className="button" href="https://medium.com/@aaron.klaser" target="_blank">
-		// 		View My Medium
-		// 		<span className="icon" style={{ marginLeft: 5 }}>
-		// 			<i className="fab fa-lg fa-medium"></i>
-		// 		</span>
-		// 	</a>
-    // </div>
 	)
 }
+
+export const pageQuery = graphql`
+	query MediumQuery {
+		allMediumPost(sort: { fields: [createdAt], order: DESC }) {
+			edges {
+				node {
+					id
+					title
+					createdAt
+					uniqueSlug
+					virtuals {
+						subtitle
+						readingTime
+						previewImage {
+							imageId
+						}
+					}
+				}
+			}
+		}
+	}
+`

@@ -37,9 +37,6 @@ export default function BlogPage({data}) {
         paddingTop: 0
       }}>
       {feed}
-      {feed}
-      {feed}
-      {feed}
       </div>
     </div>
 	)
