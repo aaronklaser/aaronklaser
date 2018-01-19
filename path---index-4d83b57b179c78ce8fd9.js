@@ -1,0 +1,2 @@
+webpackJsonp([0x81b8806e4260],{303:function(t,e){t.exports={data:{allMarkdownRemark:{edges:[{node:{id:"/Users/e062110/WebstormProjects/gatsby-site/src/blog/second-post.md absPath of file >>> MarkdownRemark",frontmatter:{path:"/blog/second-post",title:"Second Blog post",published:!0}}},{node:{id:"/Users/e062110/WebstormProjects/gatsby-site/src/blog/first-post.md absPath of file >>> MarkdownRemark",frontmatter:{path:"/blog/first-post",title:"First Blog post",published:!0}}}]}},pathContext:{}}}});
+//# sourceMappingURL=path---index-4d83b57b179c78ce8fd9.js.map

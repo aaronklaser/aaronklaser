@@ -1,0 +1,2 @@
+webpackJsonp([0xcb02b1202831],{307:function(t,o){t.exports={data:{contentfulBlogPost:{id:"IBU8NzuXAYMuQ0iUc42oy",path:"/my-first-post",title:"First Post Test",createdAt:"2018-01-17T16:16:37.370Z",content:{id:"IBU8NzuXAYMuQ0iUc42oycontentTextNode",content:"This is a test post"}}},pathContext:{}}}});
+//# sourceMappingURL=path---my-first-post-bdc80a26bfca6bf470d4.js.map
