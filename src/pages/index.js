@@ -6,7 +6,7 @@ export default function IndexPage({data}) {
 	return (
 		<div>
 
-      <section className="hero is-purple is-bold">
+      <section className="hero is-purple">
         <div className="hero-body">
           <div className="container">
             <h1 className="title">
