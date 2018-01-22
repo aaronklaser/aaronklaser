@@ -9,7 +9,7 @@ export default function ProjectsPage({data}) {
         <div className="hero-body">
           <div className="container">
             <h1 className="title">
-							Protects
+							Projects
             </h1>
             <h2 className="subtitle">
 							This is the overview sections for all the projects and tutorial series I'm working on.
