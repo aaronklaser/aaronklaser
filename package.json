@@ -7,6 +7,7 @@
     "@fortawesome/fontawesome": "^1.1.2",
     "@fortawesome/react-fontawesome": "0.0.17",
     "bulma": "^0.6.2",
+    "bulma-extensions": "^0.7.1",
     "gatsby": "^1.9.153",
     "gatsby-link": "^1.6.34",
     "gatsby-plugin-react-helmet": "^2.0.3",
