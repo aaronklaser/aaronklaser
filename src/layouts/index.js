@@ -6,6 +6,8 @@ import Footer from './Footer'
 
 import './index.scss'
 
+require("prismjs/themes/prism.css");
+
 const TemplateWrapper = ({ children }) => (
   <div style={{
     display: 'flex',

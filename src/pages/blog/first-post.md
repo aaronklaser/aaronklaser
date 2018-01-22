@@ -67,12 +67,51 @@ Externalize callbacks. Always call a functions for success/error of a promise or
 **-- Why --**
 Doing this makes unit tests easier… much easier. Now, we don’t have to mock the return for .getData() or force it to resolve or anything. All we care about is that .getData was called. We can test returning anything we want in the setData() function. This also means we can create a test single object for each service that can be reused in all our specs.
 
+``` js
+// Do NOT do this
+let data
+function getData() {
+  this.service.getDate().then((data) => {
+    this.data = data
+  })
+}
+
+// Do this
+let data
+function getData() {
+  this.service.getDate().then(this.setData)
+}
+
+setData = data => this.data = data
+```
+
 #### Rule 2:
 Don’t do things the TypeScript way. I would say just don’t use typescript but if you thought finding answers to questions was hard before, try finding answers in ES6. Write your TypeScript as if it was Javascript. Forget about creating types and models.
 
 **-- Why --**
 Sure it makes your code safer but it certainly doesn’t make it cleaner. It also keeps your code closer to javascript so in 1–4 years when something better comes along (cough Vue, cough) You can reuse as much code as possible without the need to convert it from TypeScript to JavaScript. I think readability and reusability outweighs types safe pre transpiled code.
 
+``` js
+// Do NOT do this 🤢
+public foo: IFoo = new Foo()
+public bar: Foo
+
+function setBar(foo: Foo): void {
+  this.bar = foo
+}
+
+// Do This
+foo = new Foo()
+bar
+
+function setBar(foo) {
+  this.bar = foo
+}
+// -- OR even --
+foo = new Foo(),
+bar
+setBar = foo => this.bar = foo
+```
 
 #### Rule 3:
 Always try to be declarative. Use .map() .filter() .reduce() ect… instead of things like complex for loops. Even using a library like Ramda or Lodash.
@@ -80,6 +119,21 @@ Always try to be declarative. Use .map() .filter() .reduce() ect… instead of t
 **-- Why --**
 Declarative code abstracts the logic from your code, and instead makes code more descriptive and focuses on what the code is doing an less on how code is doing it.
 
+``` js
+// Do NOT do this
+function double (arr) {
+  let results = []
+  for (let i = 0; i < arr.length; i++){
+    results.push(arr[i] * 2)
+  }
+  return results
+}
+
+// Do This
+double = arr => arr.map(item => item * 2)
+
+// Seriously, thats it! ;)
+```
 
 ## What’ Next…
 I still don’t see how this is doing Angular the React way…
