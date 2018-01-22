@@ -43,7 +43,7 @@ export default function BlogPage({data}) {
 }
 
 export const pageQuery = graphql`
-	query IndexQuery {
+	query BlogPageQuery {
 		allMarkdownRemark(
       limit: 10
       sort: { fields: [frontmatter___date], order: DESC }

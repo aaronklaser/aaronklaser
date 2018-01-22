@@ -9,7 +9,7 @@ export default function ProjectsPage({data}) {
         <div className="hero-body">
           <div className="container">
             <h1 className="title">
-							Protects
+							Projects
             </h1>
             <h2 className="subtitle">
 							This is the overview sections for all the projects and tutorial series I'm working on.
@@ -19,6 +19,41 @@ export default function ProjectsPage({data}) {
           </div>
         </div>
       </section>
+
+{/* <aside class="menu">
+  <p class="menu-label">
+    General
+  </p>
+  <ul class="menu-list">
+    <li><a>Dashboard</a></li>
+    <li><a>Customers</a></li>
+  </ul>
+  <p class="menu-label">
+    Administration
+  </p>
+  <ul class="menu-list">
+    <li><a>Team Settings</a></li>
+    <li>
+      <a class="is-active">Manage Your Team</a>
+      <ul>
+        <li><a>Members</a></li>
+        <li><a>Plugins</a></li>
+        <li><a>Add a member</a></li>
+      </ul>
+    </li>
+    <li><a>Invitations</a></li>
+    <li><a>Cloud Storage Environment Settings</a></li>
+    <li><a>Authentication</a></li>
+  </ul>
+  <p class="menu-label">
+    Transactions
+  </p>
+  <ul class="menu-list">
+    <li><a>Payments</a></li>
+    <li><a>Transfers</a></li>
+    <li><a>Balance</a></li>
+  </ul>
+</aside> */}
 
 			<div style={{
         margin: '0 auto',
