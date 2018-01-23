@@ -45,7 +45,7 @@ export default function IndexPage({data}) {
                 <article className="tile is-child notification is-dark">
                   <p className="title">Medium</p>
                   <p className="content">Medium is where I ramble and rant and tell stories. I orginally was going to use it as
-                    a coding blog, I don't like having to use Gist for all my code snippes. So I created this
+                    a coding blog, I don't like having to use Gist for all my code snippets. So I created this
                     site.
                   </p>
                   <div className="has-text-right">
@@ -74,31 +74,25 @@ export default function IndexPage({data}) {
 	)
 }
 
-export const pageQuery = graphql`
-	query IndexQuery {
-		allMarkdownRemark(
-      limit: 2
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: {
-        frontmatter: {
-          published: {
-            eq: true
-          }
-        }
-      }
-    ) {
-      edges {
-        node {
-					html
-          id
-          frontmatter {
-            icon
-            path
-						title
-						date
-          }
-        }
-      }
-    }
-	}
-`
+// export const pageQuery = graphql`
+// 	query IndexQuery {
+// 		allMarkdownRemark(
+//       limit: 2
+//       sort: { fields: [frontmatter___date], order: DESC }
+//     ) {
+//       edges {
+//         node {
+// 					html
+//           id
+//           frontmatter {
+//             icon
+//             path
+//             title
+//             status
+// 						date
+//           }
+//         }
+//       }
+//     }
+// 	}
+// `

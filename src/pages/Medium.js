@@ -30,7 +30,7 @@ export default function MediumPage({data}) {
             </h1>
             <h2 className="subtitle">
 							Medium is where I ramble and rant and tell stories. I orginally was going to use it as
-							a coding blog, I don't like having to use Gist for all my code snippes. So I created this
+							a coding blog, I don't like having to use Gist for all my code snippets. So I created this
 							site.
             </h2>
 						<a className="button is-inverted is-outlined" href="https://medium.com/@aaron.klaser" target="_blank">

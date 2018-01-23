@@ -22,7 +22,8 @@ const TemplateWrapper = ({ children }) => (
         { name: 'keywords', content: 'resume, blog, porfolio, tutorials, aaron klaser' },
       ]}
       script={[
-        { 'src': 'https://use.fontawesome.com/releases/v5.0.4/js/all.js'}
+        { 'src': 'https://use.fontawesome.com/releases/v5.0.4/js/all.js'},
+        { 'src': 'https://buttons.github.io/buttons.js'}
       ]}
       link={[
         {'rel':'stylesheet', 'href': 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'}

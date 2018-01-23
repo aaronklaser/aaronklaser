@@ -31,6 +31,14 @@ module.exports = {
         path: `${__dirname}/src/pages/blog/`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-112949543-1",
+        // Setting this parameter is optional
+        anonymize: false,
+      },
+    },
     // {
     //   resolve: `gatsby-source-medium`,
     //   options: {

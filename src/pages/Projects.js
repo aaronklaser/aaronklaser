@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import Project from './projects/Project'
+
 export default function ProjectsPage({data}) {
 
 	return (
@@ -61,6 +63,7 @@ export default function ProjectsPage({data}) {
         padding: '0px 1.0875rem 1.45rem',
         paddingTop: 0
       }}>
+        <Project />
       </div>
     </div>
 	)

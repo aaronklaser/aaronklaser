@@ -56,7 +56,8 @@ function local(createPage, graphql) {
 					frontmatter {
 						icon
 						path
-						title
+            title
+            status
 					}
 				}
 			}

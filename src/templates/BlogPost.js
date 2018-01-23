@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import moment from 'moment'
+import BlogStatusTag from '../components/BlogStatusTag'
 
 export default function BlogPost({data}) {
 
@@ -19,6 +20,8 @@ export default function BlogPost({data}) {
 					<Link className="level-item button is-small is-link is-outlined" to="/blog">Back to Blog</Link>
 				</div>
 				<div className="level-right">
+					{/* {tag(post.frontmatter.status)} */}
+					<BlogStatusTag status={post.frontmatter.status} />
 					<p className="level-item has-text-link is-size-7">
 						{moment(post.frontmatter.date).calendar(null, {
 							sameDay: '[Today]',
@@ -41,7 +44,7 @@ export const pageQuery = graphql`
 			frontmatter {
 				path
 				title
-				published
+				status
 				date
 			}
 		}

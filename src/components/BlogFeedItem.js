@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import moment from 'moment'
+import BlogStatusTag from './BlogStatusTag'
 
 const BlogFeedItem = ({frontmatter, content}) => (
   <div className="box">
@@ -19,6 +20,7 @@ const BlogFeedItem = ({frontmatter, content}) => (
             <Link className="level-item button is-small is-link is-outlined" to={frontmatter.path}>Read More</Link>
           </div>
           <div className="level-right">
+            <BlogStatusTag status={frontmatter.status} />
             <p className="level-item has-text-link is-size-7">
               {moment(frontmatter.date).calendar(null, {
                 sameDay: '[Today]',
