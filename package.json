@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "aaronklaser.com",
+  "description": "Aaron Klaser's personal website and blog built using Gatsbyjs and Bulma. To learn more about how I built it at http://aaronklaser.com",
   "version": "1.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Aaron Klaser <aaron.klaser@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.2",
     "@fortawesome/react-fontawesome": "0.0.17",
@@ -23,7 +23,10 @@
     "react-helmet": "^5.2.0"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "bulma",
+    "react",
+    "github"
   ],
   "license": "MIT",
   "main": "n/a",
