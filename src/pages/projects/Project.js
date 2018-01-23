@@ -23,7 +23,7 @@ export default function ProjectsPage({data}) {
 					<div className="tags has-addons">
 						<span className="tag is-dark">Version</span>
 						<span className="tag is-info">
-              0.1.2
+              {pkg.version}
             </span>
 					</div>
 				</div>
