@@ -4,6 +4,7 @@ project: 'Doing Angular the React way'
 icon: 'https://rangle.io/images/services/custom-angular-react-training-01.svg'
 path: '/blog/first-post'
 title: 'Doing Angular the React way'
+status: ''
 published: true
 date: '2018-01-04'
 ---
