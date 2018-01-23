@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-// const pkg = require(`../../../package.json`)
+const pkg = require(`../../../package.json`)
 
 export default function ProjectsPage({data}) {
 
@@ -32,8 +32,8 @@ export default function ProjectsPage({data}) {
 					<div className="tags has-addons">
 						<span className="tag is-dark">Gatsby</span>
             <span className="tag is-purple">
-            1.9.153
-              {/* {pkg.dependencies.gatsby.replace(/\^/g, '')} */}
+            {/* 1.9.153 */}
+              {pkg.dependencies.gatsby.replace(/\^/g, '')}
             </span>
 					</div>
 				</div>
@@ -42,14 +42,14 @@ export default function ProjectsPage({data}) {
 					<div className="tags has-addons">
 						<span className="tag is-dark">Bulma</span>
             <span className="tag is-primary">
-            0.6.2
-            {/* {pkg.dependencies.bulma.replace(/\^/g, '')} */}
+            {/* 0.6.2 */}
+            {pkg.dependencies.bulma.replace(/\^/g, '')}
             </span>
 					</div>
 				</div>
 			</div>
 
-      {/* <a className="github-button" href="https://github.com/aaronklaser/aaronklaser" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star aaronklaser/aaronklaser on GitHub">Star</a> */}
+      <a className="github-button" href="https://github.com/aaronklaser/aaronklaser" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star aaronklaser/aaronklaser on GitHub">Star</a>
 {/* <aside className="menu">
   <p className="menu-label">
     General
