@@ -1,7 +1,7 @@
 {
   "name": "aaronklaser.com",
   "description": "Aaron Klaser's personal website and blog built using Gatsbyjs and Bulma. To learn more about how I built it at http://aaronklaser.com",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "Aaron Klaser <aaron.klaser@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.2",
