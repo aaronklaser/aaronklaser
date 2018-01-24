@@ -33,13 +33,13 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # - run: git push https://3bbedf3c375a24264a1cb468a3e9279e2dac7f89@github.com/user/repo.git master
+      - run: git push https://3bbedf3c375a24264a1cb468a3e9279e2dac7f89@github.com/user/repo.git master
 
-workflows:
-  version: 2
-  send-to-github:
-    jobs:
-      - build
-          filters:
-            branches:
-              only: master
+# workflows:
+#   version: 2
+#   send-to-github:
+#     jobs:
+#       - build
+#           filters:
+#             branches:
+#               only: master
