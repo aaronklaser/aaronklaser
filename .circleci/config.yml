@@ -39,6 +39,6 @@ workflows:
   send-to-github:
     jobs:
       - build
-        filters:
-          branches:
-            only: master
+          filters:
+            branches:
+              only: master
