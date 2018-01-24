@@ -33,7 +33,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: git push https://3bbedf3c375a24264a1cb468a3e9279e2dac7f89@github.com/aaronklaser/aaronklaser.git master
+      - run: git push https://3bbedf3c375a24264a1cb468a3e9279e2dac7f89@github.com/aaronklaser/aaronklaser.git master --force
 
 # workflows:
 #   version: 2
