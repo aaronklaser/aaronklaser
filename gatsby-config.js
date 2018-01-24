@@ -35,15 +35,14 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-112949543-1",
-        // Setting this parameter is optional
         anonymize: false,
       },
     },
-    // {
-    //   resolve: `gatsby-source-medium`,
-    //   options: {
-    //     username: `@aaron.klaser`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-medium`,
+      options: {
+        username: `@aaron.klaser`,
+      },
+    },
   ],
 };
